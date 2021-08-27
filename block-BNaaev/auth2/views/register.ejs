@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="container flex">
+        <a href="/users">
+          <h2 class="logo">Home</h2>
+        </a>
+        <div>
+          <a class="btn btn_primary" href="/login">Login</a>
+          <a class="btn btn_primary" href="/register">Register</a>
+        </div>
+      </div>
+    </header>
+    <main>
+      <div class="container">
+        <div class="form">
+          <h2>Register</h2>
+          <form action="/users/register" method="POST">
+            <input
+              class="input_handle"
+              type="text"
+              name="name"
+              placeholder="Name"
+            />
+            <input
+              class="input_handle"
+              type="email"
+              name="email"
+              placeholder="Email"
+            />
+            <input
+              class="input_handle"
+              type="password"
+              name="password"
+              placeholder="Password"
+            />
+            <input
+              type="tel"
+              class="input_handle"
+              name="phone"
+              placeholder="Phone"
+            />
+            <input
+              type="number"
+              name="age"
+              class="input_handle"
+              placeholder="Age"
+            />
+            <button type="submit" class="btn btn_sub">Register</button>
+          </form>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
