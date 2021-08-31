@@ -43,34 +43,43 @@
        </div>
       </section>
 
-      <!-- <div class="comment">
+      <div class="comment form">
       <form action="/articles/<%= article._id %>/comments" method="POST">
         <textarea
           type="text"
           rows="4"
-          name="text"
+          name="content"
+          class="input_handle"
           placeholder="Add Comments"
         ></textarea>
-        <input type="text" name="author" placeholder="Author">
-        <input type="submit" class="btn-sub" value="Add Comment" />
+        <input type="submit" class="btn btn_sub" value="Add Comment" />
       </form>
-    </div> -->
-      <!-- <div class="content">
+    </div>
+      <div class="content">
       <h2 class="text">Comments</h2>
       <hr>
       <% article.comments.forEach(comment => { %>
-  
-            <p><%= comment.text %></p>
-            <p><%= comment.author %></p>
+            <p><%= comment.content %></p>
+            <p>Likes: <%= comment.likes %></p>
+            <hr>
+            <a href="/comments/<%= comment.id %>/like">
+              <button class="btn btn_like">Like 💖</button>
+          </a>
+            <a href="/comments/<%= comment.id %>/dislike">
+              <button class="btn btn_like">Dislike 👎</button>
+           </a> 
             <a href="/comments/<%= comment._id %>/edit">
-              <button class="btn-show">Edit</button>
+              <button class="btn btn_sec">Edit</button>
             </a>
             <a href="/comments/<%= comment._id %>/delete">
-              <button class="btn-show">Delete</button>
+              <button class="btn btn_ter">Delete</button>
             </a>
       <% }) %>
-      
-     </div> -->
+     </div>
+
+     <div class="center">
+      <a href="/users/logout" class="btn btn_primary" >Logout</a>
+     </div>
     </div>
   </body>
 </html>

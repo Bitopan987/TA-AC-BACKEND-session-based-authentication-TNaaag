@@ -129,6 +129,7 @@ body .list_header {
 
 body .list h3 {
   color: #37b667;
+  padding-bottom: 0.5rem;
 }
 
 body .list p {
@@ -159,6 +160,32 @@ body .article p {
 body .article .buttons {
   margin-top: 2rem;
   text-align: center;
+}
+
+body .content h2 {
+  padding: 0.5rem 0;
+  color: #58a6ff;
+}
+
+body .content hr {
+  border: none;
+  border-top: 2px solid #f8f6f6;
+  margin-bottom: 1rem;
+}
+
+body .content p {
+  font-size: 1.4rem;
+  color: grey;
+  padding: 0.1rem 0;
+}
+
+body .content button {
+  margin: 0.5rem 0.5rem 1rem 0;
+}
+
+body .center {
+  text-align: center;
+  padding: 2rem;
 }
 
 .btn {
