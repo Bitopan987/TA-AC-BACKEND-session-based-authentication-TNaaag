@@ -28,24 +28,35 @@
           <% } %>
           <form action="/users/register" method="POST">
             <input
-              class="input_handle"
               type="text"
-              name="name"
-              placeholder="Name"
+              name="firstName"
+              placeholder="First Name"
+              class="input_handle"
             />
             <input
+              type="text"
+              name="lastName"
+              placeholder="Last Name"
               class="input_handle"
+            />
+            <input
               type="email"
               name="email"
               placeholder="Email"
+              class="input_handle"
             />
             <input
-              class="input_handle"
               type="password"
               name="password"
               placeholder="Password"
+              class="input_handle"
             />
-
+            <input
+              type="text"
+              name="city"
+              placeholder="City"
+              class="input_handle"
+            />
             <button type="submit" class="btn btn_sub">Register</button>
           </form>
         </div>

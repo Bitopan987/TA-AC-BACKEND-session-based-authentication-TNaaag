@@ -1,16 +1,22 @@
 var mongoose = require('mongoose');
 var bcrypt = require('bcrypt');
+var { NotExtended } = require('http-errors');
+
 var Schema = mongoose.Schema;
-var userSchema = new Schema(
-  {
-    name: { type: String, required: true },
-    email: { type: String, required: true, unique: true },
-    password: { type: String, minlength: 5, required: true },
-  },
-  { timestamps: true }
-);
+
+var userSchema = new Schema({
+  firstName: { type: String, required: true },
+  lastName: { type: String, required: true },
+  email: { type: String, required: true, unique: true },
+  password: { type: String, required: true, minlength: 5 },
+  city: String,
+  articles: [{ type: Schema.Types.ObjectId, ref: 'Article' }],
+  fullName: String,
+});
 
 userSchema.pre('save', function (next) {
+  this.fullName = this.firstName + ' ' + this.lastName;
+  console.log(this);
   if (this.password && this.isModified('password')) {
     bcrypt.hash(this.password, 10, (err, hashed) => {
       if (err) return next(err);
@@ -28,4 +34,6 @@ userSchema.methods.verifyPassword = function (password, cb) {
   });
 };
 
-module.exports = mongoose.model('User', userSchema);
+var User = mongoose.model('User', userSchema);
+
+module.exports = User;
