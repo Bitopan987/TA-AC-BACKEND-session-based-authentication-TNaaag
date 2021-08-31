@@ -9,12 +9,21 @@ router.get('/', function (req, res, next) {
   res.render('users');
 });
 
+router.get('/dashboard', (req, res, next) => {
+  console.log(req.session);
+  User.findOne({ _id: req.session.userId }, (err, user) => {
+    if (err) return next(err);
+    res.render('dashboard', { user });
+  });
+});
+
 router.get('/register', function (req, res, next) {
   res.render('register', { error: req.flash('error')[0] });
 });
 
 router.post('/register', (req, res, next) => {
   User.create(req.body, (err, user) => {
+    console.log(err, user);
     if (err) {
       if (err.name === 'ValidationError') {
         req.flash('error', err.message);
@@ -56,7 +65,7 @@ router.post('/login', (req, res, next) => {
       }
       // persist login user info
       req.session.userId = user.id;
-      res.render('dashBoard');
+      res.redirect('/users/dashboard');
     });
   });
 });

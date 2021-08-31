@@ -26,7 +26,8 @@ body {
     }
   }
   header {
-    background-color: $primary;
+    background-color: #f6f9fc;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
     padding: 1rem 0;
     .logo {
       color: $ternary;
@@ -65,7 +66,8 @@ body {
     margin-top: 4rem;
     h1 {
       font-size: 2.5rem;
-      padding: 1rem 0;
+      padding: 2rem 0;
+      color: #58a6ff;
     }
     p {
       font-size: 2rem;
@@ -77,6 +79,54 @@ body {
     color: red;
     text-align: left;
     padding-left: 0.6rem;
+  }
+  .home {
+    text-align: center;
+  }
+  .list {
+    background-color: #eafcf1;
+    margin: 0 auto;
+    padding: 1rem 2rem;
+    max-width: 30rem;
+    margin-bottom: 0.7rem;
+    border-radius: 7px;
+    border: 2px solid #e4e0e0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    &_header {
+      text-align: center;
+      color: #58a6ff;
+      padding: 1rem 0;
+    }
+    h3 {
+      color: $secondary;
+    }
+    p {
+      color: #3184e4;
+    }
+  }
+  .article {
+    margin: 0 auto;
+    max-width: 30rem;
+    background-color: #eafcf1;
+    border: 2px solid $secondary;
+    padding: 2rem;
+    margin-top: 3rem;
+    border-radius: 7px;
+    h2 {
+      color: $ternary;
+      text-align: center;
+      padding-bottom: 1rem;
+    }
+    p {
+      font-size: 1.4rem;
+      padding: 0.3rem 0;
+    }
+    .buttons {
+      margin-top: 2rem;
+      text-align: center;
+    }
   }
 }
 
@@ -96,5 +146,17 @@ body {
     background-color: $ternary;
     color: $pure;
     margin-top: 0.5rem;
+  }
+  &_like {
+    background-color: $ternary;
+    color: aliceblue;
+  }
+  &_sec {
+    background-color: $secondary;
+    color: aliceblue;
+  }
+  &_ter {
+    background-color: red;
+    color: aliceblue;
   }
 }

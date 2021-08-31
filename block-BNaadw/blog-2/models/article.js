@@ -14,13 +14,13 @@ var articleSchema = new Schema({
   slug: { type: String, unique: true },
 });
 
-// articleSchema.pre('save', function (next) {
-//     this.slug = slugger(this.title);
-//     if (!this.likes) {
-//       this.likes = 0;
-//     }
-//     next();
-//   });
+articleSchema.pre('save', function (next) {
+  this.slug = slugger(this.title);
+  if (!this.likes) {
+    this.likes = 0;
+  }
+  next();
+});
 
 var Article = mongoose.model('Article', articleSchema);
 
