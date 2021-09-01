@@ -1,0 +1,67 @@
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+$primary: #f3f6f7;
+$secondary: #1f1e1f;
+$white: white;
+$ternary: #d78ce0;
+$blue: rgb(9, 109, 220);
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: $primary;
+  .flex {
+    display: flex;
+    padding: 0.5rem 0;
+    justify-content: space-between;
+    align-items: center;
+  }
+  header {
+    background-color: $white;
+    border-bottom: 1px sold #e7e5e5;
+    .logo {
+      color: $blue;
+    }
+  }
+  .container {
+    max-width: 60rem;
+    margin: 0 auto;
+  }
+  a {
+    text-decoration: none;
+  }
+  .btn {
+    padding: 0.7rem 1.4rem;
+  }
+  .active {
+    border-bottom: 0.15rem solid $ternary;
+    font-weight: 700;
+  }
+  img {
+    width: 100%;
+  }
+  .hero_sec {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 4rem;
+    img {
+      height: 25rem;
+    }
+    h1 {
+      color: $blue;
+      font-size: 4rem;
+      font-weight: 300;
+      padding-bottom: 1rem;
+    }
+    p {
+      font-size: 1.7rem;
+      font-weight: 600;
+    }
+  }
+}
