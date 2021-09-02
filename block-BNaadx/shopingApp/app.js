@@ -4,9 +4,9 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var mongoose = require('mongoose');
-// var session = require('express-session');ss
-// var MongoStore = require('connect-mongo');
-// var flash = require('connect-flash');
+var session = require('express-session');
+var MongoStore = require('connect-mongo')(session);
+var flash = require('connect-flash');
 
 require('dotenv').config();
 
@@ -37,22 +37,21 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 app.use((req, res, next) => {
-  console.log(res.local);
   res.locals.url = req.url;
   next();
 });
 
 // Add Sessions
-// app.use(
-//   session({
-//     secret: process.env.SECRET,
-//     resave: false,
-//     saveUninitialized: false,
-//     store: MongoStore.create({ mongoUrl: 'mongodb://localhost/shoppingApp' }),
-//   })
-// );
+app.use(
+  session({
+    secret: process.env.SECRET,
+    resave: false,
+    saveUninitialized: false,
+    store: new MongoStore({ mongooseConnection: mongoose.connection }),
+  })
+);
 
-// app.use(flash());
+app.use(flash());
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);

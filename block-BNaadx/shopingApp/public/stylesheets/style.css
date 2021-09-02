@@ -93,4 +93,60 @@ body .footer {
 body .footer small {
   color: grey;
 }
+
+body .form {
+  max-width: 30rem;
+  margin: 4rem auto;
+  background-color: white;
+  border: 1px solid #e6e3e3;
+  padding: 2rem;
+  text-align: center;
+  border-radius: 6px;
+}
+
+body .form .input_handle {
+  width: 100%;
+  display: block;
+  padding: 0.7rem 1rem;
+  margin-bottom: 1rem;
+  border-radius: 7px;
+  border: 1px solid grey;
+  color: #5f5a5a;
+}
+
+body .form h2 {
+  text-align: center;
+  color: #1f1e1f;
+  padding-bottom: 2rem;
+}
+
+body .form input[type='radio'] {
+  margin-top: 0.5rem;
+}
+
+body .form label {
+  padding-right: 0.5rem;
+}
+
+body .center {
+  text-align: center;
+}
+
+body .btn_sub {
+  font-size: 1.2rem;
+  padding: 0.5rem 1.2rem;
+  margin-top: 1.5rem;
+  border-radius: 5px;
+  border: 1px solid #c2bfbf;
+}
+
+body .btn_sub:hover {
+  background-color: #e7e3e3;
+}
+
+body .text_error {
+  color: red;
+  text-align: left;
+  padding-bottom: 0.5rem;
+}
 /*# sourceMappingURL=style.css.map */

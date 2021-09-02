@@ -71,4 +71,52 @@ body {
       color: grey;
     }
   }
+  .form {
+    max-width: 30rem;
+    margin: 4rem auto;
+    background-color: $white;
+    border: 1px solid #e6e3e3;
+    padding: 2rem;
+
+    text-align: center;
+    border-radius: 6px;
+    .input_handle {
+      width: 100%;
+      display: block;
+      padding: 0.7rem 1rem;
+      margin-bottom: 1rem;
+      border-radius: 7px;
+      border: 1px solid grey;
+      color: #5f5a5a;
+    }
+    h2 {
+      text-align: center;
+      color: $secondary;
+      padding-bottom: 2rem;
+    }
+    input[type='radio'] {
+      margin-top: 0.5rem;
+    }
+    label {
+      padding-right: 0.5rem;
+    }
+  }
+  .center {
+    text-align: center;
+  }
+  .btn_sub {
+    font-size: 1.2rem;
+    padding: 0.5rem 1.2rem;
+    margin-top: 1.5rem;
+    border-radius: 5px;
+    border: 1px solid #c2bfbf;
+  }
+  .btn_sub:hover {
+    background-color: #e7e3e3;
+  }
+  .text_error {
+    color: red;
+    text-align: left;
+    padding-bottom: 0.5rem;
+  }
 }
