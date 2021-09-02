@@ -1,18 +1,21 @@
 var mongoose = require('mongoose');
 var bcrypt = require('bcrypt');
-var { NotExtended } = require('http-errors');
+// var { NotExtended } = require('http-errors');
 
 var Schema = mongoose.Schema;
 
-var userSchema = new Schema({
-  firstName: { type: String, required: true },
-  lastName: { type: String, required: true },
-  email: { type: String, required: true, unique: true },
-  password: { type: String, required: true, minlength: 5 },
-  fullName: String,
-  isAdmin: String,
-  cart: [{ type: Schema.Types.ObjectId, ref: 'Product' }],
-});
+var userSchema = new Schema(
+  {
+    firstName: { type: String, required: true },
+    lastName: { type: String, required: true },
+    email: { type: String, required: true, unique: true },
+    password: { type: String, required: true, minlength: 5 },
+    fullName: String,
+    isAdmin: String,
+    cart: [{ type: Schema.Types.ObjectId, ref: 'Product' }],
+  },
+  { timestamps: true }
+);
 
 userSchema.pre('save', function (next) {
   this.fullName = this.firstName + ' ' + this.lastName;
