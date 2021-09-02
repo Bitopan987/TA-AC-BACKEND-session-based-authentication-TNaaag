@@ -84,4 +84,13 @@ body .hero_sec p {
   font-size: 1.7rem;
   font-weight: 600;
 }
+
+body .footer {
+  text-align: center;
+  padding: 2rem 0;
+}
+
+body .footer small {
+  color: grey;
+}
 /*# sourceMappingURL=style.css.map */
