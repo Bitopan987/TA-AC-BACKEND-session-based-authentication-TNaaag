@@ -12,7 +12,7 @@ router.get('/', (req, res, next) => {
 });
 
 router.get('/register', function (req, res, next) {
-  // // var error = req.flash('error')[0];
+  // var error = req.flash('error')[0];
   // res.render('registration', { error });
   res.render('registration');
 });

@@ -13,9 +13,6 @@
       <section class="form">
         <h2>Registration</h2>
         <form action="/users/register" method="POST">
-          <% if(error) { %>
-          <p class="text-red-500"><%= error %></p>
-          <% } %>
           <input
             type="text"
             name="firstName"
@@ -54,6 +51,6 @@
         </form>
       </section>
     </div>
+    <%- include('./include/footer'); -%>
   </body>
-  <%- include('./include/footer'); -%>
 </html>
