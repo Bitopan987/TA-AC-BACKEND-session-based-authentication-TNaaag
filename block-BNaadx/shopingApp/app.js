@@ -7,14 +7,15 @@ var mongoose = require('mongoose');
 var session = require('express-session');
 var MongoStore = require('connect-mongo')(session);
 var flash = require('connect-flash');
+var auth = require('./middlewares/auth');
 
 require('dotenv').config();
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
-// var adminRouter = require('./routes/admin');
+var adminRouter = require('./routes/admin');
 // var clientRouter = require('./routes/client');
-// var homeRouter = require('./routes/home');
+var homeRouter = require('./routes/home');
 
 // Connect with database
 mongoose.connect(
@@ -36,10 +37,6 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
-app.use((req, res, next) => {
-  res.locals.url = req.url;
-  next();
-});
 
 // Add Sessions
 app.use(
@@ -53,10 +50,13 @@ app.use(
 
 app.use(flash());
 
+app.use(auth.currentLoggedUserInfo);
+app.use(auth.urlInfo);
+
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
-// app.use('/home', homeRouter);
-// app.use('/admin', adminRouter);
+app.use('/home', homeRouter);
+app.use('/admin', adminRouter);
 // app.use('/client', clientRouter);
 
 // catch 404 and forward to error handler
