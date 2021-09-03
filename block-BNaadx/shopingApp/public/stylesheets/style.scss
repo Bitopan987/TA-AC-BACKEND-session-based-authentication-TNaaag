@@ -7,7 +7,7 @@
 }
 
 $primary: #f3f6f7;
-$secondary: #1f1e1f;
+$secondary: #696769;
 $white: white;
 $ternary: #d78ce0;
 $blue: rgb(9, 109, 220);
@@ -23,7 +23,7 @@ body {
   }
   header {
     background-color: $white;
-    border-bottom: 1px sold #e7e5e5;
+    border-bottom: 1px solid #e7e5e5;
     .logo {
       color: $blue;
     }
@@ -31,11 +31,14 @@ body {
   .container {
     max-width: 60rem;
     margin: 0 auto;
+    width: 100%;
   }
+
   a {
     text-decoration: none;
   }
-  .btn {
+
+  .btn_page {
     padding: 0.7rem 1.4rem;
   }
   .active {
@@ -67,13 +70,15 @@ body {
   .footer {
     text-align: center;
     padding: 2rem 0;
+    border-top: 1px solid #e7e5e5;
     small {
       color: grey;
     }
   }
+
   .form {
     max-width: 30rem;
-    margin: 4rem auto;
+    margin: 3rem auto;
     background-color: $white;
     border: 1px solid #e6e3e3;
     padding: 2rem;
@@ -109,14 +114,67 @@ body {
     padding: 0.5rem 1.2rem;
     margin-top: 1.5rem;
     border-radius: 5px;
-    border: 1px solid #c2bfbf;
+    border: 1px solid #a09b9b;
+    background-color: #797777;
   }
   .btn_sub:hover {
-    background-color: #e7e3e3;
+    background-color: #8f8d8d;
   }
   .text_error {
     color: red;
     text-align: left;
     padding-bottom: 0.5rem;
+  }
+  .admin_home {
+    margin: 7rem auto;
+    max-width: 50rem;
+    text-align: center;
+    padding-bottom: 4rem;
+    h3 {
+      font-size: 2rem;
+      color: $secondary;
+    }
+    div {
+      margin: 1.5rem 0;
+    }
+  }
+  .user_home {
+    margin: 7rem auto;
+    max-width: 50rem;
+    text-align: center;
+    padding-bottom: 7rem;
+    h2 {
+      font-size: 2rem;
+      color: $secondary;
+    }
+    span {
+      font-weight: 300;
+    }
+    div {
+      margin: 1.5rem 0;
+    }
+  }
+  .admin_form {
+    h1 {
+      color: $secondary;
+      text-align: center;
+      padding-top: 2rem;
+    }
+    form {
+      h2 {
+        padding-bottom: 1rem;
+      }
+    }
+  }
+}
+
+.btn {
+  padding: 0.7rem 1.2rem;
+  border-radius: 6px;
+  display: inline-block;
+  color: $primary;
+  border: none;
+  &_primary {
+    background-color: $blue;
   }
 }

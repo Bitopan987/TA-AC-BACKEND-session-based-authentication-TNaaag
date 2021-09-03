@@ -27,7 +27,7 @@ body .flex {
 
 body header {
   background-color: white;
-  border-bottom: 1px sold #e7e5e5;
+  border-bottom: 1px solid #e7e5e5;
 }
 
 body header .logo {
@@ -37,13 +37,14 @@ body header .logo {
 body .container {
   max-width: 60rem;
   margin: 0 auto;
+  width: 100%;
 }
 
 body a {
   text-decoration: none;
 }
 
-body .btn {
+body .btn_page {
   padding: 0.7rem 1.4rem;
 }
 
@@ -88,6 +89,7 @@ body .hero_sec p {
 body .footer {
   text-align: center;
   padding: 2rem 0;
+  border-top: 1px solid #e7e5e5;
 }
 
 body .footer small {
@@ -96,7 +98,7 @@ body .footer small {
 
 body .form {
   max-width: 30rem;
-  margin: 4rem auto;
+  margin: 3rem auto;
   background-color: white;
   border: 1px solid #e6e3e3;
   padding: 2rem;
@@ -116,7 +118,7 @@ body .form .input_handle {
 
 body .form h2 {
   text-align: center;
-  color: #1f1e1f;
+  color: #696769;
   padding-bottom: 2rem;
 }
 
@@ -137,16 +139,75 @@ body .btn_sub {
   padding: 0.5rem 1.2rem;
   margin-top: 1.5rem;
   border-radius: 5px;
-  border: 1px solid #c2bfbf;
+  border: 1px solid #a09b9b;
+  background-color: #797777;
 }
 
 body .btn_sub:hover {
-  background-color: #e7e3e3;
+  background-color: #8f8d8d;
 }
 
 body .text_error {
   color: red;
   text-align: left;
   padding-bottom: 0.5rem;
+}
+
+body .admin_home {
+  margin: 7rem auto;
+  max-width: 50rem;
+  text-align: center;
+  padding-bottom: 4rem;
+}
+
+body .admin_home h3 {
+  font-size: 2rem;
+  color: #696769;
+}
+
+body .admin_home div {
+  margin: 1.5rem 0;
+}
+
+body .user_home {
+  margin: 7rem auto;
+  max-width: 50rem;
+  text-align: center;
+  padding-bottom: 7rem;
+}
+
+body .user_home h2 {
+  font-size: 2rem;
+  color: #696769;
+}
+
+body .user_home span {
+  font-weight: 300;
+}
+
+body .user_home div {
+  margin: 1.5rem 0;
+}
+
+body .admin_form h1 {
+  color: #696769;
+  text-align: center;
+  padding-top: 2rem;
+}
+
+body .admin_form form h2 {
+  padding-bottom: 1rem;
+}
+
+.btn {
+  padding: 0.7rem 1.2rem;
+  border-radius: 6px;
+  display: inline-block;
+  color: #f3f6f7;
+  border: none;
+}
+
+.btn_primary {
+  background-color: #096ddc;
 }
 /*# sourceMappingURL=style.css.map */
