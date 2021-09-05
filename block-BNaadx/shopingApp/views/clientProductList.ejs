@@ -19,14 +19,30 @@
           <% } else { %>
           <a class="btn_page" href="/">Home</a>
           <% } %>
-          <a class="btn_page" href="/users/login">login</a>
-          <a class="btn_page" href="/users/register">Register</a>
 
-          <% if (user) { %>
+          <a href="/client/product/cart" class="btn_page">View cart</a>
           <a class="btn_page" href="/users/logout">Logout</a>
-          <% } %>
         </nav>
       </div>
     </header>
+    <div class="container">
+      <section class="admin_list">
+        <h3>All Products</h3>
+        <% products.forEach(ele=>{ %>
+        <article class="item-card">
+          <div class="img-div">
+            <img src="<%= ele.imageUrl  %>" alt="item img" />
+          </div>
+          <h4><%= ele.name %></h4>
+          <a
+            href="/client/product/<%= ele.id  %>/details"
+            class="btn btn_primary"
+            >Details</a
+          >
+        </article>
+        <% }) %>
+      </section>
+    </div>
+    <%- include('./include/footer'); -%>
   </body>
 </html>

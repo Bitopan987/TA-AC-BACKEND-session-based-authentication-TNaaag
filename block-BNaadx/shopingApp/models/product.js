@@ -3,7 +3,6 @@ var bcrypt = require('bcrypt');
 var { NotExtended } = require('http-errors');
 
 var Schema = mongoose.Schema;
-
 var productSchema = new Schema({
   name: { type: String, required: true },
   quantity: { type: Number, default: 0 },

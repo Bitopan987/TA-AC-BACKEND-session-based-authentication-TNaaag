@@ -20,32 +20,39 @@
           <a class="btn_page" href="/">Home</a>
           <% } %>
           <a class="btn_page" href="/admin/product/new">Add new product</a>
-          <a class="btn_page" href="/users/login">login</a>
+          <a href="/admin/product/list" class="btn_page">product list</a>
+          <a href="/users/logout" class="btn_page">Logout</a>
+          <a href="/admin/product/details/<%= product.id  %>" class="btn_page"
+            >Back</a
+          >
         </nav>
       </div>
     </header>
     <div class="container admin_form">
-      <h1>Add New Product</h1>
+      <h1>Product Edit Page</h1>
       <section class="form">
-        <h2>Product Details</h2>
-        <form action="/admin/product/new" method="POST">
+        <h2>Edit Product Details</h2>
+        <form action="/admin/product/<%= product.id  %>/edit" method="POST">
           <input
             type="text"
             name="name"
             placeholder="Name"
             class="input_handle"
+            value="<%= product.name %>"
           />
           <input
             type="number"
             name="quantity"
             placeholder="Quantity"
             class="input_handle"
+            value="<%= product.quantity %>"
           />
           <input
             type="number"
             placeholder="Price"
             name="price"
             class="input_handle"
+            value="<%= product.price %>"
           />
 
           <input
@@ -53,6 +60,7 @@
             placeholder="image url"
             name="imageUrl"
             class="input_handle"
+            value="<%= product.imageUrl %>"
           />
           <div class="center">
             <button type="submit" class="btn btn_sub">Submit</button>
