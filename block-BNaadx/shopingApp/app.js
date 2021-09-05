@@ -14,7 +14,7 @@ require('dotenv').config();
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var adminRouter = require('./routes/admin');
-// var clientRouter = require('./routes/client');
+var clientRouter = require('./routes/client');
 var homeRouter = require('./routes/home');
 
 // Connect with database
@@ -57,7 +57,7 @@ app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/home', homeRouter);
 app.use('/admin', adminRouter);
-// app.use('/client', clientRouter);
+app.use('/client', clientRouter);
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {

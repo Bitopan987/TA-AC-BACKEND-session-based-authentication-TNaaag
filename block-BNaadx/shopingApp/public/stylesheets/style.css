@@ -199,6 +199,139 @@ body .admin_form form h2 {
   padding-bottom: 1rem;
 }
 
+body .admin_list {
+  padding-bottom: 4rem;
+}
+
+body .admin_list h3 {
+  text-align: center;
+  padding: 2rem 0;
+  font-size: 2.3rem;
+}
+
+body .admin_list .item-card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  max-width: 40rem;
+  margin: 0.5rem auto;
+  padding: 0.7rem 1rem;
+  background-color: white;
+  border-radius: 7px;
+}
+
+body .admin_list .img-div {
+  width: 35%;
+}
+
+body .admin_list h4 {
+  padding: 0.7rem 0;
+  color: #096ddc;
+  font-size: 1.7rem;
+}
+
+body .product-details-card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  max-width: 40rem;
+  margin: 5rem auto 2rem auto;
+  background-color: white;
+  padding: 1rem;
+  border-radius: 6px;
+}
+
+body .product-details-card .img-div {
+  width: 60%;
+}
+
+body .product-details-card .img-div img {
+  height: 15rem;
+}
+
+body .product-details-card .product-text {
+  width: 35%;
+}
+
+body .product-details-card .product-text h2 {
+  padding: 0.5rem 0;
+  font-size: 1.7rem;
+}
+
+body .product-details-card .product-text h4 {
+  padding: 0.4rem 0;
+}
+
+body .center {
+  padding-bottom: 4rem;
+}
+
+body .center a {
+  margin-right: 0.5rem;
+}
+
+body .button_sec {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+body .button_sec a {
+  display: inline-block;
+  margin-right: 0.5rem;
+}
+
+body .button_sec img {
+  height: 35px;
+  width: 35px;
+}
+
+body .client {
+  max-width: 40rem;
+  background-color: white;
+  margin: 4rem auto;
+  padding: 1rem 1.4rem;
+  border-radius: 7px;
+}
+
+body .client h3 {
+  color: #096ddc;
+  padding: 0.5rem 0;
+}
+
+body .client .client_content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body .client .client_content img {
+  width: 2rem;
+}
+
+body .client hr {
+  border: none;
+  border-top: 2px solid #f3eded;
+  margin: 1rem 0;
+}
+
 .btn {
   padding: 0.7rem 1.2rem;
   border-radius: 6px;
@@ -209,5 +342,9 @@ body .admin_form form h2 {
 
 .btn_primary {
   background-color: #096ddc;
+}
+
+.btn_delete {
+  background-color: red;
 }
 /*# sourceMappingURL=style.css.map */

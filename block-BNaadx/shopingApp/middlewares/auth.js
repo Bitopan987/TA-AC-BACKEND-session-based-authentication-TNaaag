@@ -9,7 +9,7 @@ module.exports = {
         res.locals.user = user;
         next();
       });
-    } else {
+    }else{
       req.user = null;
       res.locals.user = null;
       next();
